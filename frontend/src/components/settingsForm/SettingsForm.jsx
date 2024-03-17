@@ -6,9 +6,15 @@ import { IoEyeOutline } from "react-icons/io5";
 
 const SettingsForm = () => {
   const [password, setPassword] = useState("");
-  const [showPassword, setShowPassword] = useState(false);
-  const handleTogglePasswordVisibility = () => {
-    setShowPassword(!showPassword);
+  const [oldPassword, setOldPassword] = useState(false);
+  const [newPassword, setNewPassword] = useState(false);
+
+  const toggleOldPassword = () => {
+    setOldPassword(!oldPassword);
+  };
+
+  const toggleNewPassword = () => {
+    setNewPassword(!newPassword);
   };
   return (
     <>
@@ -20,36 +26,27 @@ const SettingsForm = () => {
         <div className="field-box">
           <CiLock />
           <input
-            type={showPassword ? "text" : "password"}
+            type={oldPassword ? "text" : "password"}
             value={password}
             onChange={(e) => setPassword(e.target.value)}
             placeholder="Old Password"
           />
-          {showPassword ? (
-            <IoEyeOffOutline
-              className="icon-btn"
-              onClick={handleTogglePasswordVisibility}
-            />
+          {oldPassword ? (
+            <IoEyeOffOutline className="icon-btn" onClick={toggleOldPassword} />
           ) : (
-            <IoEyeOutline
-              className="icon-btn"
-              onClick={handleTogglePasswordVisibility}
-            />
+            <IoEyeOutline className="icon-btn" onClick={toggleOldPassword} />
           )}
         </div>
         <div className="field-box">
           <CiLock />
-          <input type="password" placeholder="New Password" />
-          {showPassword ? (
-            <IoEyeOffOutline
-              className="icon-btn"
-              onClick={handleTogglePasswordVisibility}
-            />
+          <input
+            type={newPassword ? "text" : "password"}
+            placeholder="New Password"
+          />
+          {newPassword ? (
+            <IoEyeOffOutline className="icon-btn" onClick={toggleNewPassword} />
           ) : (
-            <IoEyeOutline
-              className="icon-btn"
-              onClick={handleTogglePasswordVisibility}
-            />
+            <IoEyeOutline className="icon-btn" onClick={toggleNewPassword} />
           )}
         </div>
         <button className="update-btn">Update</button>
