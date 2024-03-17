@@ -1,0 +1,238 @@
+.priority-btn {
+  border-radius: 8px;
+  padding: 5px 8px;
+  border: 1px solid#E2E2E2;
+  color: #767575;
+  font-size: 14px;
+  font-weight: 500;
+  text-transform: uppercase;
+  margin: 0 5px;
+  cursor: pointer;
+  background: transparent;
+}
+
+.priority-btn > svg {
+  width: 12px;
+  height: 12px;
+  position: relative;
+  right: 1px;
+}
+
+.hight-priority {
+  color: #ff2473;
+}
+
+.moderate-priority {
+  color: #18b0ff;
+}
+
+.low-priority {
+  color: #63c05b;
+}
+
+.modal,
+.overlay {
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  position: fixed;
+  z-index: 1000;
+  transition: 0.8s;
+}
+
+.overlay {
+  background: #303d438c;
+}
+
+.modal-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  line-height: 1.4;
+  background: #fff;
+  padding: 14px 28px;
+  border-radius: 3px;
+  max-width: 666px;
+  min-width: 250px;
+  height: 450px;
+  max-height: 596px;
+  z-index: 1000;
+  border-radius: 12px;
+}
+
+.input-group {
+  width: 588px;
+  height: 72px;
+}
+
+.input-group .form-label {
+  margin-bottom: 12px;
+  font-weight: 500;
+  font-size: 14px;
+  letter-spacing: 0.5px;
+}
+
+.input-group .form-control {
+  display: block;
+  width: 100%;
+  height: 44px;
+  border-radius: 4px;
+  border: 1px solid rgb(212, 209, 209);
+  outline: none;
+  padding: 0px 12px;
+}
+
+.priority-buttons {
+  width: 588px;
+  height: 31px;
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.checklist {
+  font-size: 14px;
+  font-weight: 500;
+  margin-top: 20px;
+  display: flex;
+  justify-content: flex-start;
+  gap: 5px;
+}
+
+.list {
+  width: 588px;
+  height: 230px;
+  padding-top: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 15px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+.list::-webkit-scrollbar {
+  width: 8px;
+  height: 10px;
+}
+
+.list::-webkit-scrollbar-thumb {
+  background-color: #8daab9;
+  border-radius: 10px;
+}
+
+.list::-webkit-scrollbar-track {
+  background-color: #f1f1f1;
+}
+
+.list::-webkit-scrollbar-corner {
+  background-color: transparent;
+}
+
+.list-item {
+  width: 588px;
+  height: 44px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.list-item-input {
+  border: 1px solid #e2e2e2;
+  width: 588px !important;
+  height: 44px;
+  padding: 0px 12px;
+  outline: none;
+}
+
+.list-item .delete-btn {
+  color: #cf3636;
+  position: relative;
+  right: 23px;
+  cursor: pointer;
+  width: 18px;
+  height: 18px;
+}
+
+.list .add-btn {
+  background: transparent;
+  border: none;
+  outline: none;
+  font-size: 14px;
+  font-weight: 500;
+  color: #767575;
+  cursor: pointer;
+}
+
+.popup-buttons {
+  width: 588px;
+  height: 44px;
+  display: flex;
+  padding-top: 5px;
+}
+
+.popup-buttons > :first-child {
+  width: 50%;
+  height: 100%;
+}
+
+.popup-buttons > :last-child {
+  width: 50%;
+  height: 100%;
+  text-align: right;
+}
+
+.dateLabel {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.popup-buttons input[type="date"] {
+  height: 90%;
+  width: 165px;
+  border: 1px solid #707070;
+  border-radius: 8px;
+  color: #707070;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 0 12px;
+  margin-left: 8px;
+}
+
+.btn {
+  width: 132px;
+  height: 90%;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.cancel-btn {
+  background: transparent;
+  border: 1px solid #cf3636;
+  color: #cf3636;
+  margin-right: 12px;
+}
+
+.cancel-btn:hover {
+  background: #cf3636;
+  color: white;
+  transition: 0.3s;
+}
+
+.save-btn {
+  background: #17a2b8;
+  color: white;
+  border: none;
+}
+
+.save-btn:hover {
+  opacity: 0.85;
+  transition: 0.3s;
+}

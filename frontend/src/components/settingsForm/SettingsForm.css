@@ -1,0 +1,55 @@
+.settings-form {
+  width: 493.39px;
+  height: 308.61px;
+}
+
+.field-box {
+  width: 493px;
+  height: 45px;
+  padding: 10.46px;
+  border-radius: 11.03px;
+  border: 1.38px solid #d0d0d0;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  position: relative;
+  margin-bottom: 15px;
+}
+
+.field-box > svg {
+  width: 22.5px;
+  height: 22.5px;
+  color: #828282;
+}
+
+.field-box > input {
+  position: absolute;
+  left: 43px;
+  height: 90%;
+  width: 90%;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  font-weight: 400;
+  color: #828282;
+}
+
+.eye-lock {
+  position: absolute;
+  right: 10px;
+  color: #828282;
+  cursor: pointer;
+}
+
+.settings-form > button {
+  width: 493px;
+  height: 45px;
+  padding: 10.46px;
+  border-radius: 55px;
+  background-color: #17a2b8;
+  border: none;
+  font-size: 19.29px;
+  color: white;
+  cursor: pointer;
+  margin-top: 22px;
+}

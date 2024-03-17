@@ -1,0 +1,52 @@
+.filter-container {
+  position: relative;
+}
+
+.filter-button {
+  background-color: #fff;
+  padding: 10px;
+  cursor: pointer;
+  border: none;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.filter-button > span {
+  position: relative;
+  right: 3px;
+}
+
+.arrow {
+  position: relative;
+  top: 3px;
+}
+
+.dropdown {
+  position: absolute;
+  top: 40px;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 8px 10px 4px whitesmoke;
+  padding: 8px;
+  z-index: 500;
+  width: 150px;
+  left: -70px;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  padding: 10px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  border-radius: 12px;
+}
+
+li:hover {
+  background-color: #eef2f5;
+}

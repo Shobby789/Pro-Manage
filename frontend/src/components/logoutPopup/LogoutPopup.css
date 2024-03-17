@@ -1,0 +1,101 @@
+.logout-btn {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #cf3636;
+  gap: 14px;
+  position: absolute;
+  bottom: 39px;
+  left: 0;
+}
+
+.logout-btn > button {
+  color: #cf3636;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.logout-modal,
+.logout-overlay {
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  position: fixed;
+  z-index: 1000;
+  transition: 0.8s;
+}
+
+.logout-overlay {
+  background: #303d438c;
+}
+
+.logout-modal-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  line-height: 1.4;
+  background: #fff;
+  padding: 24px 35px;
+  border-radius: 3px;
+  max-width: 335px;
+  min-width: 335px;
+  height: 200px;
+  z-index: 1000;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+}
+
+.logout-modal-content > p {
+  font-weight: 600;
+  font-size: 14px;
+  text-align: center;
+}
+
+.logout-buttons {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.logout-buttons > button {
+  width: 100%;
+  height: 45px;
+  gap: 10px;
+  border-radius: 12px;
+  border: none;
+  font-weight: 600;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.logout-buttons > :first-child {
+  background: #17a2b8;
+  color: white;
+}
+
+.logout-buttons > :first-child:hover {
+  background: rgb(75, 185, 202);
+  transition: 0.3s;
+}
+
+.logout-buttons > :last-child {
+  background-color: transparent;
+  border: 1px solid #cf3636;
+  color: #cf3636;
+}
+
+.logout-buttons > :last-child:hover {
+  color: white;
+  background-color: #cf3636;
+  transition: 0.3s;
+}

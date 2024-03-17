@@ -1,0 +1,11 @@
+.settings-container {
+  width: 100%;
+  height: 100%;
+  padding: 35px 0px 0px 26px;
+}
+
+.settings-container > h3 {
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}

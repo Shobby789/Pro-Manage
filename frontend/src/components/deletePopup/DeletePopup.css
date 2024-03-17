@@ -1,0 +1,99 @@
+.delete-btn {
+  font-size: 14px;
+  font-weight: 500;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  text-align: left;
+}
+
+.delete-btn:hover {
+  color: #cf3636;
+  transition: 0.3s;
+}
+
+/* popup */
+.DeletePopup-modal,
+.DeletePopup-overlay {
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  position: fixed;
+  z-index: 1000;
+  transition: 0.8s;
+}
+
+.DeletePopup-overlay {
+  background: #303d438c;
+}
+
+.DeletePopup-modal-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  line-height: 1.4;
+  background: #fff;
+  padding: 24px 35px;
+  border-radius: 3px;
+  max-width: 335px;
+  min-width: 335px;
+  height: 200px;
+  z-index: 1000;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+}
+
+.DeletePopup-modal-content > p {
+  font-weight: 600;
+  font-size: 14px;
+  text-align: center;
+  color: black;
+}
+
+.DeletePopup-buttons {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.DeletePopup-buttons > button {
+  width: 100%;
+  height: 45px;
+  gap: 10px;
+  border-radius: 12px;
+  border: none;
+  font-weight: 600;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.DeletePopup-buttons > :first-child {
+  background: #17a2b8;
+  color: white;
+}
+
+.DeletePopup-buttons > :first-child:hover {
+  background: rgb(75, 185, 202);
+  transition: 0.3s;
+}
+
+.DeletePopup-buttons > :last-child {
+  background-color: transparent;
+  border: 1px solid #cf3636;
+  color: #cf3636;
+}
+
+.DeletePopup-buttons > :last-child:hover {
+  color: white;
+  background-color: #cf3636;
+  transition: 0.3s;
+}
