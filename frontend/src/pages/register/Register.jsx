@@ -12,6 +12,7 @@ import { IoPersonOutline } from "react-icons/io5";
 const Register = () => {
   const [password, setPassword] = useState("");
   const [showPassword, setShowPassword] = useState(false);
+  const [showConfirmPassword, setShowConfirmPassword] = useState(false);
 
   const navigate = useNavigate();
 
@@ -21,6 +22,9 @@ const Register = () => {
   };
   const handleTogglePasswordVisibility = () => {
     setShowPassword(!showPassword);
+  };
+  const toggleShowConfirmPassword = () => {
+    setShowConfirmPassword(!showConfirmPassword);
   };
 
   return (
@@ -51,12 +55,12 @@ const Register = () => {
               placeholder="Password"
             />
             {showPassword ? (
-              <IoEyeOffOutline
+              <IoEyeOutline
                 className="icon-btn"
                 onClick={handleTogglePasswordVisibility}
               />
             ) : (
-              <IoEyeOutline
+              <IoEyeOffOutline
                 className="icon-btn"
                 onClick={handleTogglePasswordVisibility}
               />
@@ -65,18 +69,18 @@ const Register = () => {
           <div className="text-field">
             <CiLock />
             <input
-              type={showPassword ? "text" : "password"}
+              type={showConfirmPassword ? "text" : "password"}
               placeholder="Confirm Password"
             />
-            {showPassword ? (
-              <IoEyeOffOutline
-                className="icon-btn"
-                onClick={handleTogglePasswordVisibility}
-              />
-            ) : (
+            {showConfirmPassword ? (
               <IoEyeOutline
                 className="icon-btn"
-                onClick={handleTogglePasswordVisibility}
+                onClick={toggleShowConfirmPassword}
+              />
+            ) : (
+              <IoEyeOffOutline
+                className="icon-btn"
+                onClick={toggleShowConfirmPassword}
               />
             )}
           </div>

@@ -46,12 +46,12 @@ const Login = () => {
               placeholder="Password"
             />
             {showPassword ? (
-              <IoEyeOffOutline
+              <IoEyeOutline
                 className="icon-btn"
                 onClick={handleTogglePasswordVisibility}
               />
             ) : (
-              <IoEyeOutline
+              <IoEyeOffOutline
                 className="icon-btn"
                 onClick={handleTogglePasswordVisibility}
               />

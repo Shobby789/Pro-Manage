@@ -32,9 +32,9 @@ const SettingsForm = () => {
             placeholder="Old Password"
           />
           {oldPassword ? (
-            <IoEyeOffOutline className="icon-btn" onClick={toggleOldPassword} />
-          ) : (
             <IoEyeOutline className="icon-btn" onClick={toggleOldPassword} />
+          ) : (
+            <IoEyeOffOutline className="icon-btn" onClick={toggleOldPassword} />
           )}
         </div>
         <div className="field-box">
@@ -44,9 +44,9 @@ const SettingsForm = () => {
             placeholder="New Password"
           />
           {newPassword ? (
-            <IoEyeOffOutline className="icon-btn" onClick={toggleNewPassword} />
-          ) : (
             <IoEyeOutline className="icon-btn" onClick={toggleNewPassword} />
+          ) : (
+            <IoEyeOffOutline className="icon-btn" onClick={toggleNewPassword} />
           )}
         </div>
         <button className="update-btn">Update</button>

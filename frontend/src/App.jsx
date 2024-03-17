@@ -1,12 +1,4 @@
-import {
-  Route,
-  Router,
-  RouterProvider,
-  Routes,
-  createBrowserRouter,
-  createRoutesFromElements,
-  useNavigate,
-} from "react-router-dom";
+import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import "./App.css";
 import Sidebar from "./components/sidebar/Sidebar";
 import ErrorPage from "./pages/ErrorPage";
@@ -33,7 +25,11 @@ const router = createBrowserRouter([
   },
   {
     path: "/dashboard",
-    element: <Sidebar />,
+    element: (
+      <Auth>
+        <Sidebar />
+      </Auth>
+    ),
     errorElement: <ErrorPage />,
     children: [
       {
