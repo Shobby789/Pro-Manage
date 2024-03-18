@@ -25,11 +25,7 @@ const router = createBrowserRouter([
   },
   {
     path: "/dashboard",
-    element: (
-      <Auth>
-        <Sidebar />
-      </Auth>
-    ),
+    element: <Sidebar />,
     errorElement: <ErrorPage />,
     children: [
       {

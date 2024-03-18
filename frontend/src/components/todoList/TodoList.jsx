@@ -6,6 +6,7 @@ import { IoIosArrowDown } from "react-icons/io";
 import { IoIosArrowUp } from "react-icons/io";
 import Notification from "../notification/Notification";
 import DeletePopup from "../deletePopup/DeletePopup";
+import EditFormPopup from "../editFormPopup/EditFormPopup";
 
 const TodoList = () => {
   const [show, setShow] = useState(false);
@@ -56,9 +57,8 @@ const TodoList = () => {
           </button>
           {showActions ? (
             <div className="actions">
-              <button onClick={() => setShowActions(!showActions)}>Edit</button>
+              <EditFormPopup />
               <button onClick={showNotifications}>Share</button>
-              {/* <button>Delete</button> */}
               <DeletePopup
                 title="Are you sure you want to Delete?"
                 btnText="Delete"
