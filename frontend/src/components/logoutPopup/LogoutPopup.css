@@ -8,6 +8,7 @@
   position: absolute;
   bottom: 39px;
   left: 0;
+  /* border: 1px solid black; */
 }
 
 .logout-btn > button {

@@ -12,8 +12,11 @@
 .sidebar-wrapper .logo {
   display: flex;
   align-items: center;
-  gap: 12px;
-  margin-bottom: 28px;
+  justify-content: center;
+  gap: 12px;  
+  margin-bottom: 30px;
+  /* border: 1px solid black; */
+  width: 100%;
 }
 
 .sidebar-wrapper .logo > svg {
@@ -31,13 +34,13 @@
   width: 100%;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  justify-content: center;
+  align-items: center;
 }
 .sidebar-wrapper > ul > li {
   width: 80%;
+  /* border: 1px solid black; */
   margin: 6px auto;
-  padding: 12px 0px 12px 15%;
+  padding: 12px 0px 12px 19%;
 }
 
 .active-link {
