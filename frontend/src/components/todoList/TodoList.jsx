@@ -7,6 +7,7 @@ import { IoIosArrowUp } from "react-icons/io";
 import Notification from "../notification/Notification";
 import DeletePopup from "../deletePopup/DeletePopup";
 import EditFormPopup from "../editFormPopup/EditFormPopup";
+import { useFetchDataQuery } from "../../redux/apiSlice/ApiSlice";
 
 const TodoList = () => {
   const [show, setShow] = useState(false);
@@ -40,6 +41,12 @@ const TodoList = () => {
     return () => clearTimeout(time);
   }, [showNotification]);
 
+  const { data, error, isLoading } = useFetchDataQuery();
+  if (error) {
+    console.log("get-all-tasks error >> ", error);
+  }
+  console.log("get-all-tasks data >> ", data);
+
   return (
     <>
       {showNotification ? <Notification /> : ""}
@@ -58,6 +65,7 @@ const TodoList = () => {
           {showActions ? (
             <div className="actions">
               <EditFormPopup />
+              <button onClick={showNotifications}>Move</button>
               <button onClick={showNotifications}>Share</button>
               <DeletePopup
                 title="Are you sure you want to Delete?"
@@ -88,11 +96,48 @@ const TodoList = () => {
           <div className="todolist">
             <div className="todoItem">
               <input type="checkbox" name="" id="todo-checkbox" />
-              <p className="">Task to be done.</p>
+              <p className="">
+                Lorem ipsum dolor sit amet consectetur adipisicing. Lorem ipsum
+                dolor sit amet consectetur adipisicing.
+              </p>
             </div>
             <div className="todoItem">
               <input type="checkbox" name="" id="todo-checkbox" />
-              <p className="">Task to be done.</p>
+              <p className="">
+                Lorem ipsum dolor sit amet consectetur adipisicing.Lorem ipsum
+                dolor sit amet consectetur adipisicing.Lorem ipsum dolor sit
+                amet consectetur adipisicing.
+              </p>
+            </div>
+            <div className="todoItem">
+              <input type="checkbox" name="" id="todo-checkbox" />
+              <p className="">
+                Lorem ipsum dolor sit amet consectetur adipisicing. Lorem ipsum
+                dolor sit amet consectetur adipisicing.
+              </p>
+            </div>
+            <div className="todoItem">
+              <input type="checkbox" name="" id="todo-checkbox" />
+              <p className="">
+                Lorem ipsum dolor sit amet consectetur adipisicing.Lorem ipsum
+                dolor sit amet consectetur adipisicing.Lorem ipsum dolor sit
+                amet consectetur adipisicing.
+              </p>
+            </div>
+            <div className="todoItem">
+              <input type="checkbox" name="" id="todo-checkbox" />
+              <p className="">
+                Lorem ipsum dolor sit amet consectetur adipisicing. Lorem ipsum
+                dolor sit amet consectetur adipisicing.
+              </p>
+            </div>
+            <div className="todoItem">
+              <input type="checkbox" name="" id="todo-checkbox" />
+              <p className="">
+                Lorem ipsum dolor sit amet consectetur adipisicing.Lorem ipsum
+                dolor sit amet consectetur adipisicing.Lorem ipsum dolor sit
+                amet consectetur adipisicing.
+              </p>
             </div>
           </div>
         ) : (

@@ -11,6 +11,7 @@ require("dotenv").config();
 const PORT = process.env.PORT;
 require("./models/db/taskSchema");
 require("./models/db/userSchema");
+require("./models/db/userTokenSchema");
 
 app.use("/api", require("./routes/taskRoutes"));
 app.use("/api", require("./routes/userRoutes"));

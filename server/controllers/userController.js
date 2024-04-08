@@ -4,6 +4,7 @@ const jwt = require("jsonwebtoken");
 require("../models/db/userSchema");
 const UserModel = mongoose.model("Users");
 const { SECRET_KEY } = require("../data/key");
+const { generateToken } = require("../utils/generateTokens");
 
 module.exports.CreateUser = async (req, res) => {
   const { name, email, password } = req.body;
@@ -27,29 +28,26 @@ module.exports.LoginUser = async (req, res) => {
     if (!isRegisteredUser) {
       return res.status(401).json({ message: "Email is not registered" });
     }
-    if (await bcrypt.compare(password, isRegisteredUser.password)) {
-      const accessToken = jwt.sign(
-        { email: isRegisteredUser.email },
-        SECRET_KEY,
-        { expiresIn: "1d" }
-      );
-      if (res.status(201)) {
-        return res.status(200).json({
-          message: "Login successfull",
-          data: {
-            user: {
-              _id: isRegisteredUser._id,
-              name: isRegisteredUser.name,
-              email: isRegisteredUser.email,
-            },
-            accessToken,
-          },
-        });
-      } else {
-        return res.status(401).json({ message: "Invalid credentials" });
-      }
+
+    const verifiedPassword = bcrypt.compare(
+      password,
+      isRegisteredUser.password
+    );
+    if (!verifiedPassword) {
+      return res.status(401).json({ message: "Invalid Password" });
     }
-    res.status(401).json({ message: "Invalid Email or Password" });
+
+    const { accessToken, refreshToken } = await generateToken(isRegisteredUser);
+    // const userTokensabx = await generateToken(isRegisteredUser);
+    // console.log("userTokensabx >> ", userTokensabx);
+
+    res.status(200).json({
+      error: false,
+      accessToken,
+      refreshToken,
+      message: "Login successful",
+    });
+    // res.status(401).json({ message: "Invalid Email or Password" });
   } catch (error) {
     console.log("LoginError >> ", error);
     res.status(500).json({ message: "Something went wrong" });
